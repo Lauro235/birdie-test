@@ -15,6 +15,7 @@ module.exports = {
   parserOptions: {
     project: "tsconfig.json",
     sourceType: "module",
+    tsconfigRootDir: __dirname,
   },
   plugins: ["@typescript-eslint"],
   rules: {
@@ -39,6 +40,7 @@ module.exports = {
     "require-await": "warn",
     "no-console": "warn",
     "@typescript-eslint/no-floating-promises": "error",
+    "endOfLine": "auto"
   },
   root: true,
   ignorePatterns: [".eslintrc.js"],
