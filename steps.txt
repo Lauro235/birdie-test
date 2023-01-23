@@ -1,0 +1,23 @@
+Change node to version 16.17.1
+npm i in frontend and backend folders
+Check frontend with npm start works ✅
+move to backend files
+check __tests__ ping.spec.ts
+Receive "Parsing error: Cannot read file 'c:\users\lozzy\programming\birdie\birdietest2\tsconfig.json'.eslint"
+check src/application.ts, src/index.ts and src/controllers/ping.ts
+Also receive the error "Parsing error: Cannot read file 'c:\users\lozzy\programming\birdie\birdietest2\tsconfig.json'.eslint"
+Check => https://stackoverflow.com/questions/64933543/parsing-error-cannot-read-file-tsconfig-json-eslint
+Update tsconfigRootDir to __dirname in parserOptions
+Now all imports are working except the import in "__tests__/ping.spec.ts"
+Check tsconfig.json and find the following in the excluded section => "**/*-spec.ts"
+This could be a test or there for a valid reason. Double check
+In "tsconfig.json", I removed "**/*-spec.ts" from exclude
+In "tsconfig.json", I added "__tests__" to include
+I get the error "Delete `␍`eslintprettier/prettier" in all files
+Add "endOfLine": "auto" to .eslintrc.js
+No linting errors!
+npm start on frontend works ✅
+npm run dev on backend doesn't work ❌
+node_modules\typescript\lib\typescript.js:43495 => ts.Debug.assert(typeof typeReferenceDirectiveName === "string", "Non-string value passed to `ts.resolveTypeReferenceDirective`, likely by a wrapping package working with an outdated `resolveTypeReferenceDirectives` signature. This is probably not a problem in TS itself.");
+Upgraded ts-node dev dependency to latest version.
+npm run dev on backend now works ✅
