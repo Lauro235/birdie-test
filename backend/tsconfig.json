@@ -8,6 +8,7 @@
     ],
     "target": "es2015",
     "outDir": "./lib",
+    "typeRoots": ["./global.d.ts"],
     "removeComments": true,
     "inlineSourceMap": true,
     "inlineSources": true,
