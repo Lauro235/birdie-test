@@ -5,27 +5,30 @@ import * as path from "path";
 dotenv.config({ path: path.resolve(__dirname, ".env") });
 
 interface ENV {
-  // NODE_ENV: string | undefined;
-  // PORT: number | undefined;
-  // MONGO_URI: string | undefined;
-  SECRET: string | undefined;
+  DBHOST: string | undefined;
+  DBPORT: string | undefined;
+  DBUSER: string | undefined;
+  DBPASSWORD: string | undefined;
+  DB: string | undefined;
 }
 
 interface Config {
-  // NODE_ENV: string;
-  // PORT: number;
-  // MONGO_URI: string;
-  SECRET: string;
+  DBHOST: string;
+  DBPORT: string;
+  DBUSER: string;
+  DBPASSWORD: string;
+  DB: string;
 }
 
 // Loading process.env as ENV interface
 
 const getConfig = (): ENV => {
   return {
-    // NODE_ENV: process.env.NODE_ENV,
-    // PORT: process.env.PORT ? Number(process.env.PORT) : undefined,
-    // MONGO_URI: process.env.MONGO_URI,
-    SECRET: process.env.SECRET
+    DBHOST: process.env.DBHOST,
+    DBPORT: process.env.DBPORT,
+    DBUSER: process.env.DBUSER,
+    DBPASSWORD: process.env.DBPASSWORD,
+    DB: process.env.DB
   };
 };
 
@@ -46,6 +49,6 @@ const getSanitzedConfig = (config: ENV): Config => {
 
 const config = getConfig();
 
-const sanitizedConfig = getSanitzedConfig(config);
+const env = getSanitzedConfig(config);
 
-export default sanitizedConfig;
+export default env;
