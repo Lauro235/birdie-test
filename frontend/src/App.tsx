@@ -1,23 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { useEffect, useState } from 'react';
 
 function App() {
+  const [quote, setQuote] = useState<string | undefined>(undefined);
+
+  useEffect(
+    () => {
+      const fetchData = async () => {
+        const data = await fetch("https://api.kanye.rest/")
+        const {quote} = await data.json()
+        setQuote(quote)
+      }
+      fetchData()
+    }
+    ,[]
+  )
+
+  console.log(quote);
+  
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <h1>Portal</h1>
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          {quote}
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
