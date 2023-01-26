@@ -1,15 +1,17 @@
 import app from "./application";
-import awsConnection from "../db/index"
+import dbRowCount from "../db/models/dbRowCount"
+import * as cors from "cors"
 
 const port = process.env.PORT || 8000;
 
-awsConnection.connect((err) => {
-  if(!err) {
-    console.log("db is connected");
-  }
-  else {
-    console.log(err);
-  }
+app.use(cors())
+
+app.get('/', async (req, res) => {
+  req == null
+  const count = await dbRowCount();
+  console.log(`This is the count: ${count}`);
+
+  res.json(count)
 })
 
 app.listen(port, () => {
