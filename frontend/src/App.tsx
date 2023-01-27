@@ -1,30 +1,28 @@
 import './App.css';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 function App() {
-  const [quote, setQuote] = useState<string | undefined>(undefined);
+  // const [quote, setQuote] = useState<string | undefined>(undefined);
 
   useEffect(
     () => {
       const fetchData = async () => {
-        const data = await fetch("https://api.kanye.rest/")
-        const {quote} = await data.json()
-        setQuote(quote)
+        const res = await fetch("http://localhost:8000/")
+        const data = await res.json()
+        console.log(data);
+        
       }
       fetchData()
     }
     ,[]
   )
 
-  console.log(quote);
-  
-
   return (
     <div className="App">
       <header className="App-header">
         <h1>Portal</h1>
         <p>
-          {quote}
+          Text
         </p>
       </header>
     </div>

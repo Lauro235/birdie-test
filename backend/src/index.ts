@@ -1,18 +1,14 @@
 import app from "./application";
-import dbRowCount from "../db/models/dbRowCount"
 import * as cors from "cors"
+import OnLoad from "../routes/OnLoad"
 
 const port = process.env.PORT || 8000;
 
 app.use(cors())
 
-app.get('/', async (req, res) => {
-  req == null
-  const count = await dbRowCount();
-  console.log(`This is the count: ${count}`);
+app.use(OnLoad)
 
-  res.json(count)
-})
+
 
 app.listen(port, () => {
   // eslint-disable-next-line no-console
