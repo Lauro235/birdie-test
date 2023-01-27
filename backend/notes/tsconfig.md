@@ -4,6 +4,10 @@ I found that the describe and it methods in the test folder wasn't picking up th
 
 I updated the tsconfig.json to include "types": ["jest", "node"]. This quickly resolved the testing module issue, but I was worried that by removing typeRoots I would sabotage the connection to the database as the env variable relies on global.d.ts, however so far, the connection is still working.
 
+Useful links are
+[Initial Checklist](https://stackoverflow.com/a/61107618/15592981)
+[Remove typeRoots](https://stackoverflow.com/a/69120948/15592981)
+
 ```json
 {
   "compilerOptions": {
