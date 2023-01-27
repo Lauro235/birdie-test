@@ -1,8 +1,8 @@
 import './App.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
-  // const [quote, setQuote] = useState<string | undefined>(undefined);
+  const [events, setEvents] = useState<string | undefined>(undefined);
 
   useEffect(
     () => {
@@ -10,7 +10,7 @@ function App() {
         const res = await fetch("http://localhost:8000/")
         const data = await res.json()
         console.log(data);
-        
+        setEvents(data)
       }
       fetchData()
     }

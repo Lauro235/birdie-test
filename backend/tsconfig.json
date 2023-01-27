@@ -7,8 +7,8 @@
       "esnext"
     ],
     "target": "es2015",
+    "types": ["jest", "node"],
     "outDir": "./lib",
-    "typeRoots": ["./global.d.ts"],
     "removeComments": true,
     "inlineSourceMap": true,
     "inlineSources": true,

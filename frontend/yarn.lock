@@ -1253,6 +1253,23 @@
     "minimatch" "^3.0.4"
     "strip-json-comments" "^3.1.1"
 
+"@fullcalendar/core@^6.0.3", "@fullcalendar/core@~6.0.3":
+  "integrity" "sha512-4REVuYAxqJjXpLhOC0oABap4Xl8gmykCsHgL61Yy3rdCwWVx/SoE5L3hs8ZUCmsRrgSZOzgiH8sle87RaGi8iw=="
+  "resolved" "https://registry.npmjs.org/@fullcalendar/core/-/core-6.0.3.tgz"
+  "version" "6.0.3"
+  dependencies:
+    "preact" "^10.0.5"
+
+"@fullcalendar/daygrid@^6.0.3":
+  "integrity" "sha512-JWWwWRsi1dgTlbXSbqjmBjd9SRN6wuXOvOwcuvW5sZtk77vtuD5DKcqoitOREq4e2P/f2WdMV6812AVSAPRODw=="
+  "resolved" "https://registry.npmjs.org/@fullcalendar/daygrid/-/daygrid-6.0.3.tgz"
+  "version" "6.0.3"
+
+"@fullcalendar/react@^6.0.4":
+  "integrity" "sha512-TpEGOWWZtD3whXPf8XCXGGPhQusKo/egRb1GUC1oH0Zb1zFagRXGTYPcn2acMatHIk5ZxuF/2NMiF5Iz6gEYcw=="
+  "resolved" "https://registry.npmjs.org/@fullcalendar/react/-/react-6.0.4.tgz"
+  "version" "6.0.4"
+
 "@hapi/address@2.x.x":
   "integrity" "sha512-QD1PhQk+s31P1ixsX0H0Suoupp3VMXzIVMSwobR3F3MSUO2YCV0B7xqLcUw/Bh8yuvd3LhpyqLQWTNcRmp6IdQ=="
   "resolved" "https://registry.npmjs.org/@hapi/address/-/address-2.1.4.tgz"
@@ -9189,6 +9206,11 @@
     "source-map" "^0.6.1"
     "supports-color" "^6.1.0"
 
+"preact@^10.0.5":
+  "integrity" "sha512-eY93IVpod/zG3uMF22Unl8h9KkrcKIRs2EGar8hwLZZDU1lkjph303V9HZBwufh2s736U6VXuhD109LYqPoffg=="
+  "resolved" "https://registry.npmjs.org/preact/-/preact-10.11.3.tgz"
+  "version" "10.11.3"
+
 "prelude-ls@^1.2.1":
   "integrity" "sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g=="
   "resolved" "https://registry.npmjs.org/prelude-ls/-/prelude-ls-1.2.1.tgz"
@@ -9502,7 +9524,7 @@
     "strip-ansi" "6.0.0"
     "text-table" "0.2.0"
 
-"react-dom@*", "react-dom@^17.0.2":
+"react-dom@*", "react-dom@^16.7.0 || ^17 || ^18", "react-dom@^17.0.2":
   "integrity" "sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-17.0.2.tgz"
   "version" "17.0.2"
@@ -9597,7 +9619,7 @@
   optionalDependencies:
     "fsevents" "^2.1.3"
 
-"react@*", "react@^17.0.2", "react@>= 16", "react@17.0.2":
+"react@*", "react@^16.7.0 || ^17 || ^18", "react@^17.0.2", "react@>= 16", "react@17.0.2":
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
   "version" "17.0.2"
@@ -11351,10 +11373,15 @@
   "resolved" "https://registry.npmjs.org/type-detect/-/type-detect-4.0.8.tgz"
   "version" "4.0.8"
 
-"type-fest@^0.11.0", "type-fest@^0.13.1":
+"type-fest@^0.11.0":
   "integrity" "sha512-OdjXJxnCN1AvyLSzeKIgXTXxV+99ZuXl3Hpo9XpJAv9MBcHrrJOQ5kV7ypXOuQie+AmWG25hLbiKdwYTifzcfQ=="
   "resolved" "https://registry.npmjs.org/type-fest/-/type-fest-0.11.0.tgz"
   "version" "0.11.0"
+
+"type-fest@^0.13.1":
+  "integrity" "sha512-34R7HTnG0XIJcBSn5XhDd7nNFPRcXYRZrBB2O2jdKqYODldSzBAqzsWoZYYvduky73toYS/ESqxPvkDf/F0XMg=="
+  "resolved" "https://registry.npmjs.org/type-fest/-/type-fest-0.13.1.tgz"
+  "version" "0.13.1"
 
 "type-fest@^0.20.2":
   "integrity" "sha512-Ne+eE4r0/iWnpAxD852z3A+N0Bt5RN//NjJwRd2VFHEmrywxf5vsZlh4R6lixl6B+wz/8d+maTSAkN1FIkI3LQ=="
