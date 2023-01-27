@@ -18,13 +18,12 @@ const retrieveTimestamps = () => {
 
 // value is fed through 👇
 const timestampsToString = async () => {
-    retrieveTimestamps()
+    return await retrieveTimestamps()
     .then((timestamps) => {
+      const resultArr: string[] = []
       let result = Object.values<Time>(JSON.parse(JSON.stringify(timestamps)));
-      result.forEach((entry) => console.log(entry.timestamp));
-
-      console.log(result);
-      return result
+      result.forEach((entry) => resultArr.push(entry.timestamp));
+      return resultArr
     })
 }
 
