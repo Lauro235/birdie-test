@@ -1,3 +1,10 @@
+# TS Config Notes
+
+I found that the describe and it methods in the test folder wasn't picking up the modules "@types/jest": "^26.0.23" and "@types/node": "^15.0.2",
+
+I updated the tsconfig.json to include "types": ["jest", "node"]. This quickly resolved the testing module issue, but I was worried that by removing typeRoots I would sabotage the connection to the database as the env variable relies on global.d.ts, however so far, the connection is still working.
+
+```json
 {
   "compilerOptions": {
     "declaration": true,
@@ -9,6 +16,7 @@
     "target": "es2015",
     "types": ["jest", "node"],
     "outDir": "./lib",
+    // "typeRoots": ["./global.d.ts"],
     "removeComments": true,
     "inlineSourceMap": true,
     "inlineSources": true,
@@ -29,3 +37,4 @@
     "node_modules",
   ]
 }
+```
