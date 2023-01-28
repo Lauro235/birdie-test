@@ -1,8 +1,14 @@
 import './App.css';
 import { useEffect, useState } from 'react';
+import {createLabelArray, createDataArray} from './helper/chart'
+
+/*
+implement bar chart
+https://react-chartjs-2.js.org/examples/vertical-bar-chart/
+*/
 
 function App() {
-  const [events, setEvents] = useState<string | undefined>(undefined);
+  const [events, setEvents] = useState<{[key: string]: number}>({});
 
   useEffect(
     () => {
@@ -16,6 +22,11 @@ function App() {
     }
     ,[]
   )
+
+  console.log(typeof events);
+  console.log(createLabelArray(events));
+  console.log(createDataArray(events));
+  
 
   return (
     <div className="App">
