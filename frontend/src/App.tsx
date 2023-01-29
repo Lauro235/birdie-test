@@ -2,7 +2,7 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import {createLabelArray, createDataArray} from './helper/chart'
 import MyBar from './Components/Charts/Bar';
-import { isNotObject } from './helper/isObject';
+import { isNotObject } from './helper/isNotObject';
 
 /*
 implement bar chart
