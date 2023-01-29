@@ -1,6 +1,8 @@
 import './App.css';
 import { useEffect, useState } from 'react';
 import {createLabelArray, createDataArray} from './helper/chart'
+import MyBar from './Components/Charts/Bar';
+import { isNotObject } from './helper/isObject';
 
 /*
 implement bar chart
@@ -23,11 +25,6 @@ function App() {
     ,[]
   )
 
-  console.log(typeof events);
-  console.log(createLabelArray(events));
-  console.log(createDataArray(events));
-  
-
   return (
     <div className="App">
       <header className="App-header">
@@ -35,6 +32,10 @@ function App() {
         <p>
           Text
         </p>
+        {
+          isNotObject(events) === false &&
+          <MyBar eventLabels={createLabelArray(events)} eventData={createDataArray(events)} />
+        }
       </header>
     </div>
   );
