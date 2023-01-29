@@ -5,13 +5,11 @@ import bar from './MyBar.module.css'
 
 ChartJS.register(ArcElement, Tooltip, CategoryScale, LinearScale, BarElement )
 
-// interface EventProps extends BarElement
-
-function MyBar(eventLabels: string[], eventData: number[]) {
+function MyBar(props: {eventLabels: string[], eventData: number[]}) {
   const data = {
-    labels: eventLabels,
+    labels: props.eventLabels,
     datasets: [{
-      data: eventData,
+      data: props.eventData,
       backgroundColor: [
         '#333',
         '#234',
