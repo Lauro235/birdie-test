@@ -1,8 +1,16 @@
 import './App.css';
 import { useEffect, useState } from 'react';
+import {createLabelArray, createDataArray} from './helper/chart'
+import MyBar from './Components/Charts/Bar';
+import { isNotObject } from './helper/isObject';
+
+/*
+implement bar chart
+https://react-chartjs-2.js.org/examples/vertical-bar-chart/
+*/
 
 function App() {
-  const [events, setEvents] = useState<string | undefined>(undefined);
+  const [events, setEvents] = useState<{[key: string]: number}>({});
 
   useEffect(
     () => {
@@ -24,6 +32,10 @@ function App() {
         <p>
           Text
         </p>
+        {
+          isNotObject(events) === false &&
+          <MyBar eventLabels={createLabelArray(events)} eventData={createDataArray(events)} />
+        }
       </header>
     </div>
   );
