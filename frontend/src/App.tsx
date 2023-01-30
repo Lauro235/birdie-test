@@ -13,6 +13,7 @@ https://react-chartjs-2.js.org/examples/vertical-bar-chart/
 
 function App() {
   const [events, setEvents] = useState<{[key: string]: number}>({});
+  const [recipientJson, setRecipientJson] = useState<{[key: string]: string}>({})
 
   // useEffect(
   //   () => {
@@ -27,10 +28,12 @@ function App() {
   //   )
 
   useFetch('http://localhost:8000/', setEvents)
+  useFetch('http://localhost:8000/time', setRecipientJson)
+
   
-    console.log(events.payload);
     console.log(events);
-    
+    console.log(recipientJson);
+      
     
   return (
     <div className="App">
