@@ -23,9 +23,7 @@ Type 'string | number' is not assignable to type 'number'.
             Type 'string' is not assignable to type 'number'.  TS2345
 ```
 
-If you see a message like this, it's simple to understand that string !== string | number, but what caught me out is that although 'string | number' translates mentally to 'string or number'
-
-or here simply indicates the types the parameter could be, it doesn't tell TypeScript to accept both of them. Because it cannot be certain what type the parameter will be it refuses to call the parameter regardless of what type it is.
+If you see a message like this, it's simple to understand that string !== string | number, but what caught me out is that although 'string | number' translates mentally to 'string or number', here it simply indicates the types the parameter could be, it doesn't tell TypeScript to accept both of them. Because it cannot be certain what type the parameter will be it refuses to call the parameter regardless of what type it is.
 
 [Microsoft on Covariance and Contravariance](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/covariance-contravariance/)
 
