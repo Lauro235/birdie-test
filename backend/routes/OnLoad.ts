@@ -13,7 +13,6 @@ OnLoad.get("/", async (req, res, next) => {
     next()
   }, async () => {
     console.log(await sample());
-    
   })
 
 export default OnLoad;
