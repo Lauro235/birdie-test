@@ -15,38 +15,29 @@ function App() {
   const [events, setEvents] = useState<{[key: string]: number}>({});
   const [recipientJson, setRecipientJson] = useState<{[key: string]: string}>({})
 
-  // useEffect(
-  //   () => {
-  //     const fetchData = async () => {
-  //       const res = await fetch("http://localhost:8000/")
-  //       const data = await res.json()
-  //       setEvents(data)
-  //     }
-  //     fetchData()
-  //   }
-  //   ,[]
-  //   )
-
   useFetch('http://localhost:8000/', setEvents)
   useFetch('http://localhost:8000/time', setRecipientJson)
-
   
-    console.log(events);
-    console.log(recipientJson);
-      
-    
+  
+  // console.log(events);
+  // console.log(typeof recipientJson);
+  console.log(recipientJson.payload);
+  
+  
   return (
     <div className="App">
       <header className="App-header">
         <h1>Portal</h1>
-        <p>
-          Text
-        </p>
-        {
-          isNotObject(events) === false &&
-          <MyBar eventLabels={createLabelArray(events)} eventData={createDataArray(events)} />
-        }
       </header>
+      <div className="grid">
+        <div className='other'></div>
+        {
+          isNotObject(events) === true ? <div></div>
+          : <MyBar eventLabels={createLabelArray(events)} eventData={createDataArray(events)} />
+        }
+        <div className='other'></div>
+        <div className='other'></div>
+      </div>
     </div>
   );
 }
