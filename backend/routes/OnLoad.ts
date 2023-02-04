@@ -1,18 +1,13 @@
 import * as express from "express";
-import dbRowCount from "../db/models/dbRowCount"
-import sample from "../db/models/sample"
+import dbEventCount from "../db/models/dbEventCount"
 
 const OnLoad = express.Router()
 
-OnLoad.get("/", async (req, res, next) => {
+OnLoad.get("/", async (req, res) => {
     req == null
-
-    const count = await dbRowCount();
+    const count = await dbEventCount();
     console.log(`This is the count: ${JSON.stringify(count, null, 2)}`);
     res.json(count)
-    next()
-  }, async () => {
-    console.log(await sample());
   })
 
 export default OnLoad;

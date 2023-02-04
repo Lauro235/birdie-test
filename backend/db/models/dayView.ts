@@ -6,7 +6,7 @@ const dayView = () => {
         `SELECT
             payload_as_text as payload
         FROM events
-            WHERE timestamp REGEXP "2019-05-12";`,  (error, elements)=>{
+            WHERE timestamp REGEXP "2019-05-12";`,  (error, elements) =>{
             if(error){
                 return reject(error);
             }

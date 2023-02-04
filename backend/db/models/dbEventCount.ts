@@ -1,6 +1,6 @@
 import pool from "../index"
 
-const dbRowCount = () => {
+const dbEventCount = () => {
     return new Promise((resolve, reject)=>{
         pool.query(
         `SELECT
@@ -27,4 +27,4 @@ const dbRowCount = () => {
     });
 };
 
-export default dbRowCount;
+export default dbEventCount;
