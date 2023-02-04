@@ -7,6 +7,7 @@ It appears Chart.js comes with TS support out of the box.
 ### [Official Docs](https://www.chartjs.org/docs/latest/getting-started/integration.html)
 
 Two big issues in this process were:
+
 1. Transferring data from client app as prop over to Chart JS component
 2. Compiling it!
 
@@ -29,7 +30,7 @@ Thankfully there was a quick and dirty solution
 
 [Stack Overflow - chart.js 695:18](https://stackoverflow.com/a/74559895/15592981)
 
-The following was an error that may be important later on in the development process.  
+The following was an error that may be important later on in the development process.
+**Update** The error means I will have to add the --legacy-peer-deps flag to each npm install and uninstall. It's worth looking into the dependencies of each package for security, but it's a trade off of time vs productivity.
 
 <img src="./images/chartjs_legacy_dep_warning.png" width="300" />
-
